@@ -1,0 +1,17 @@
+function clickDrawer(){
+    //alert('click');
+
+    // The ID of the extension we want to talk to.
+    var editorExtensionId = "ddhlifppofbjmmiamkpojgeidoijgabp";
+
+   // Make a simple request:
+   chrome.runtime.sendMessage(editorExtensionId,
+       { data: "data to pass to the chrome app" },
+       function (response)
+       {
+         console.log('drawer: ' + response);
+         //alert(response);
+       }
+   );
+
+  }
